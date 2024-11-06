@@ -1,0 +1,10 @@
+- name: Copy index.html template to the web server
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+  vars:
+    prize_message: "Congrats!!! You just won an iPhone 16, you just need to press this button."
+    credit_card_info: "i just need your credit card info." 
